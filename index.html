@@ -28,56 +28,70 @@
     }
     .hero {
       display: flex;
-      gap: 40px;
+      gap: 48px;
       align-items: center;
       justify-content: space-between;
       flex-wrap: wrap;
       background: #fff;
       border-radius: 22px;
       box-shadow: var(--shadow);
-      padding: 38px 32px 32px 32px;
+      padding: 52px 42px 40px 42px;
       margin-bottom: 32px;
     }
     .hero-text {
-      flex: 1 1 330px;
+      flex: 1 1 380px;
+      min-width: 260px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
     }
     .hero-name {
-      font-size: 2.6em;
+      font-size: 2.7em;
       font-weight: 900;
-      color: var(--accent);
-      margin-bottom: 8px;
+      color: #41b3a3;
+      margin-bottom: 0.08em;
       font-family: 'Montserrat', 'Inter', Arial, sans-serif;
-      letter-spacing: 0.02em;
+      letter-spacing: 0.01em;
     }
-    .hero-tag {
-      font-size: 1.21em;
-      font-weight: 600;
-      color: var(--dark);
-      margin-bottom: 14px;
+    .hero-headline {
+      font-size: 1.35em;
+      font-weight: 700;
+      color: #23272f;
+      margin-bottom: 12px;
+      letter-spacing: 0.01em;
+      border-bottom: 2.5px solid #41b3a3;
+      display: inline-block;
+      padding-bottom: 6px;
     }
-    .hero-desc {
-      font-size: 1.07em;
+    .hero-summary {
+      font-size: 1.08em;
       color: #38555b;
-      margin-bottom: 26px;
-      line-height: 1.55;
-      max-width: 500px;
+      margin-bottom: 8px;
+      line-height: 1.5;
+      max-width: 540px;
+    }
+    .hero-location {
+      font-size: 1em;
+      color: #7ca7a5;
+      margin-bottom: 18px;
     }
     .hero-buttons {
       display: flex;
-      gap: 16px;
+      gap: 18px;
       flex-wrap: wrap;
+      margin-top: 12px;
     }
     .hero-btn {
       display: inline-block;
       background: linear-gradient(90deg, var(--accent), #388087 100%);
       color: #fff;
       font-weight: 600;
-      font-size: 1.05em;
+      font-size: 1.06em;
       padding: 12px 32px;
       border-radius: 32px;
       text-decoration: none;
       box-shadow: 0 2px 12px #41b3a314;
-      transition: transform 0.15s, box-shadow 0.2s;
+      transition: transform 0.15s, box-shadow 0.2s, background 0.2s;
       border: none;
     }
     .hero-btn:hover {
@@ -85,15 +99,20 @@
       box-shadow: 0 6px 30px #41b3a326;
       background: linear-gradient(90deg, #388087 10%, var(--accent) 90%);
     }
+    .hero-pic-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 210px;
+    }
     .hero-pic {
-      width: 190px;
-      height: 190px;
+      width: 170px;
+      height: 170px;
       border-radius: 50%;
       object-fit: cover;
-      border: 6px solid var(--accent2);
+      border: 7px solid #c3bcfa;
       box-shadow: 0 2px 32px #41b3a320;
       background: #fff;
-      margin: 0 0 0 12px;
       animation: fadein 1.2s;
     }
     @keyframes fadein {
@@ -181,17 +200,17 @@
       letter-spacing: 0.01em;
     }
     @media (max-width: 900px) {
-      .hero { flex-direction: column-reverse; align-items: flex-start; gap: 25px;}
+      .hero { flex-direction: column-reverse; align-items: flex-start; gap: 24px;}
       .hero-pic { margin-left: 0;}
       .container { padding: 30px 2vw 12px 2vw; }
       .section { padding: 18px 5vw 18px 5vw;}
     }
     @media (max-width: 550px) {
-      .hero-name { font-size: 1.7em;}
+      .hero-name { font-size: 1.3em;}
       .section { padding: 11vw 2vw 10vw 2vw;}
       .cert-card { padding: 13px 5px 13px 9px;}
-      .cert-card img { max-width: 130px;}
-      h2 { font-size: 1.05em;}
+      .cert-card img { max-width: 120px;}
+      h2 { font-size: 1em;}
     }
   </style>
 </head>
@@ -201,19 +220,23 @@
     <section class="hero">
       <div class="hero-text">
         <div class="hero-name">Amylia Martineau</div>
-        <div class="hero-tag">Aspiring Tech Professional.</div>
-        <div class="hero-desc">
-          Transitioning into tech after a career in admin & office management. I’m actively building skills in Python, Cloud Computing, Cybersecurity, and Web Development.<br>
-          <span style="font-size:0.97em;color:#38808799;">Based in Sudbury, ON. Open to remote opportunities, and always seeking new challenges!</span>
+        <div class="hero-headline">Aspiring Tech Professional</div>
+        <div class="hero-summary">
+          Passionate about technology and digital transformation after a successful career in administration and office management.<br>
+          <span style="color:#338a7e;">Currently focused on Python, Cloud Computing, Cybersecurity, and Web Development.</span>
+        </div>
+        <div class="hero-location">
+          Based in Sudbury, ON. Open to remote opportunities and new challenges.
         </div>
         <div class="hero-buttons">
           <a href="mailto:amyliamartineau@hotmail.com" class="hero-btn">📧 Email Me</a>
           <a href="Resume.pdf" class="hero-btn" download target="_blank">⬇️ Resume (PDF)</a>
           <a href="Resume.docx" class="hero-btn" download target="_blank">⬇️ Resume (Word)</a>
-          <!-- Add more buttons (GitHub, LinkedIn) as you set up profiles -->
         </div>
       </div>
-      <img src="Photoroom_20250605_140000.JPEG" alt="Amylia's Profile Photo" class="hero-pic">
+      <div class="hero-pic-container">
+        <img src="Photoroom_20250605_140000.JPEG" alt="Amylia's Profile Photo" class="hero-pic">
+      </div>
     </section>
     
     <!-- CERTIFICATIONS -->
@@ -245,16 +268,15 @@
         <li>Cloud Resume Challenge (In Progress)</li>
         <li>Password Generator Web App (Coming Soon)</li>
         <li>Personal Expense Tracker in Python (Planned)</li>
-        <!-- Add real links as you publish projects! -->
       </ul>
     </section>
 
-    <!-- CONTACT (duplicate hero-buttons here if you want, or leave for footer) -->
+    <!-- CONTACT (repeat buttons or add socials as you create them) -->
     <section class="section">
       <h2>Contact & Links</h2>
       <div class="hero-buttons">
         <a href="mailto:amyliamartineau@hotmail.com" class="hero-btn">📧 Email Me</a>
-        <!-- Add GitHub and LinkedIn buttons here as you set them up -->
+        <!-- Add GitHub and LinkedIn buttons here when ready! -->
       </div>
     </section>
 
