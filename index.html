@@ -3,319 +3,96 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Amylia Martineau | Aspiring Tech Professional</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;900&family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --accent: #41b3a3;
-      --accent2: #cbeaed;
-      --dark: #23272f;
-      --light: #fafbfc;
-      --muted: #e4e6ea;
-      --shadow: 0 6px 30px #41b3a326;
-    }
-    body {
-      background: linear-gradient(120deg, var(--light) 70%, var(--accent2) 100%);
-      font-family: 'Inter', 'Montserrat', Arial, sans-serif;
-      color: var(--dark);
-      margin: 0;
-      padding: 0;
-    }
-    .container {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 40px 16px 24px 16px;
-    }
-    .hero {
-      display: flex;
-      gap: 48px;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      background: #fff;
-      border-radius: 22px;
-      box-shadow: var(--shadow);
-      padding: 52px 42px 40px 42px;
-      margin-bottom: 32px;
-    }
-    .hero-text {
-      flex: 1 1 380px;
-      min-width: 260px;
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-    }
-    .hero-name {
-      font-size: 2.7em;
-      font-weight: 900;
-      color: #41b3a3;
-      margin-bottom: 0.08em;
-      font-family: 'Montserrat', 'Inter', Arial, sans-serif;
-      letter-spacing: 0.01em;
-    }
-    .hero-headline {
-      font-size: 1.35em;
-      font-weight: 700;
-      color: #23272f;
-      margin-bottom: 12px;
-      letter-spacing: 0.01em;
-      border-bottom: 2.5px solid #41b3a3;
-      display: inline-block;
-      padding-bottom: 6px;
-    }
-    .hero-summary {
-      font-size: 1.08em;
-      color: #38555b;
-      margin-bottom: 8px;
-      line-height: 1.5;
-      max-width: 540px;
-    }
-    .hero-location {
-      font-size: 1em;
-      color: #7ca7a5;
-      margin-bottom: 18px;
-    }
-    .hero-buttons {
-      display: flex;
-      gap: 18px;
-      flex-wrap: wrap;
-      margin-top: 12px;
-    }
-    .hero-btn {
-      display: inline-block;
-      background: linear-gradient(90deg, var(--accent), #388087 100%);
-      color: #fff;
-      font-weight: 600;
-      font-size: 1.06em;
-      padding: 12px 32px;
-      border-radius: 32px;
-      text-decoration: none;
-      box-shadow: 0 2px 12px #41b3a314;
-      transition: transform 0.15s, box-shadow 0.2s, background 0.2s;
-      border: none;
-    }
-    .hero-btn:hover {
-      transform: translateY(-3px) scale(1.045);
-      box-shadow: 0 6px 30px #41b3a326;
-      background: linear-gradient(90deg, #388087 10%, var(--accent) 90%);
-    }
-    .hero-pic-container {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-width: 210px;
-    }
-    .hero-pic {
-      width: 170px;
-      height: 170px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 7px solid #c3bcfa;
-      box-shadow: 0 2px 32px #41b3a320;
-      background: #fff;
-      animation: fadein 1.2s;
-    }
-    @keyframes fadein {
-      from { opacity: 0; transform: scale(0.95);}
-      to   { opacity: 1; transform: scale(1);}
-    }
-    .section {
-      background: #fff;
-      border-radius: 18px;
-      margin-bottom: 32px;
-      padding: 36px 30px 32px 30px;
-      box-shadow: var(--shadow);
-      animation: fadein 0.7s;
-    }
-    h2 {
-      color: #388087;
-      font-family: 'Montserrat', Arial, sans-serif;
-      font-size: 1.37em;
-      margin-top: 0;
-      letter-spacing: 0.01em;
-      margin-bottom: 18px;
-      font-weight: 700;
-    }
-    .cert-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 24px;
-    }
-    .cert-card {
-      flex: 1 1 260px;
-      min-width: 210px;
-      background: var(--light);
-      border-radius: 13px;
-      box-shadow: 0 2px 16px #3880870b;
-      padding: 20px 18px 14px 18px;
-      text-align: left;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      transition: box-shadow 0.2s;
-      border: 1.5px solid #e8f4f6;
-    }
-    .cert-card:hover {
-      box-shadow: 0 8px 24px #41b3a328;
-    }
-    .cert-card img {
-      max-width: 210px;
-      max-height: 90px;
-      border-radius: 7px;
-      margin-bottom: 13px;
-      background: #fff;
-    }
-    .cert-title {
-      font-weight: 600;
-      font-size: 1.08em;
-      color: #38555b;
-      margin-bottom: 8px;
-    }
-    .cert-link {
-      color: #41b3a3;
-      text-decoration: none;
-      font-size: 0.98em;
-      margin-bottom: 5px;
-      transition: color 0.2s;
-      font-weight: 500;
-    }
-    .cert-link:hover {
-      color: #388087;
-      text-decoration: underline;
-    }
-    .resume-btns {
-      display: flex;
-      gap: 18px;
-      margin-top: 8px;
-      flex-wrap: wrap;
-    }
-    .footer {
-      text-align: center;
-      color: #7c8b91;
-      font-size: 1em;
-      padding: 30px 12px 20px 12px;
-      background: #f8fafc;
-      border-top: 1.5px solid #e4e6ea;
-      margin-top: 30px;
-      letter-spacing: 0.01em;
-    }
-    @media (max-width: 900px) {
-      .hero { flex-direction: column-reverse; align-items: flex-start; gap: 24px;}
-      .hero-pic { margin-left: 0;}
-      .container { padding: 30px 2vw 12px 2vw; }
-      .section { padding: 18px 5vw 18px 5vw;}
-    }
-    @media (max-width: 550px) {
-      .hero-name { font-size: 1.3em;}
-      .section { padding: 11vw 2vw 10vw 2vw;}
-      .cert-card { padding: 13px 5px 13px 9px;}
-      .cert-card img { max-width: 120px;}
-      h2 { font-size: 1em;}
-    }
-  </style>
+  <title>Amylia Martineau | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="container">
-    <!-- HERO -->
-    <section class="hero">
-      <div class="hero-text">
-        <div class="hero-name">Amylia Martineau</div>
-        <div class="hero-headline">Aspiring Tech Professional</div>
-        <div class="hero-summary">
-          Passionate about technology and digital transformation after a successful career in administration and office management.<br>
-          <span style="color:#338a7e;">Currently focused on Python, Cloud Computing, Cybersecurity, and Web Development.</span>
-        </div>
-        <div class="hero-location">
-          Based in Sudbury, ON. Open to remote opportunities and new challenges.
-        </div>
-        <div class="hero-buttons">
-          <a href="mailto:amyliamartineau@hotmail.com" class="hero-btn">📧 Email Me</a>
-          <a href="Resume.pdf" class="hero-btn" download target="_blank">⬇️ Resume (PDF)</a>
-          <a href="Resume.docx" class="hero-btn" download target="_blank">⬇️ Resume (Word)</a>
-        </div>
-      </div>
-      <div class="hero-pic-container">
-        <img src="Photoroom_20250605_140000.JPEG" alt="Amylia's Profile Photo" class="hero-pic">
-      </div>
-    </section>
-    
-    <!-- CERTIFICATIONS -->
-    <section class="section">
-      <h2>Certifications</h2>
-      <div class="cert-list">
-        <div class="cert-card">
-          <img src="introduction-to-cybersecurity.png" alt="Cisco Cybersecurity Badge">
-          <div class="cert-title">Introduction to Cybersecurity</div>
-          <a href="Cybersecuritybadge.pdf" class="cert-link" target="_blank">Cisco Networking Academy, 2025 (PDF)</a>
-        </div>
-        <div class="cert-card">
-          <img src="JAVASCRIPTCERT.png" alt="JS Certificate">
-          <div class="cert-title">Legacy JavaScript Algorithms & Data Structures</div>
-          <a href="https://freecodecamp.org/certification/amyliamartineau/javascript-algorithms-and-data-structures" class="cert-link" target="_blank">FreeCodeCamp, 2025</a>
-        </div>
-        <div class="cert-card">
-          <img src="WEBDESIGNCERT.png" alt="Web Design Certificate">
-          <div class="cert-title">Responsive Web Design</div>
-          <a href="https://freecodecamp.org/certification/fcc-e6993284-6be0-4354-a531-368df38f3389/responsive-web-design" class="cert-link" target="_blank">FreeCodeCamp, 2025</a>
-        </div>
-      </div>
-    </section>
-    
-<section class="section">
-  <h2>Cloud Resume Challenge</h2>
-  <p>
-    As part of my transition into tech, I built this portfolio as my Cloud Resume project. It’s deployed using GitHub Pages, and I regularly update it with new certifications and projects as I learn.<br><br>
-    <b>What I learned:</b> Cloud hosting, website deployment, continuous updates, and showcasing my ongoing technical growth.<br>
-    <b>Next steps:</b> Move to AWS S3 or Cloudflare Pages and add automation features.
-  </p>
-  <ul>
-    <li>Source code: <a href="https://github.com/amyliamartineau/amylia.portfolio" target="_blank">GitHub Repo</a></li>
-    <li>Live site: <a href="https://amyliamartineau.github.io/amylia.portfolio/" target="_blank">Portfolio Website</a></li>
-    <!-- Add a screenshot if you want! -->
-  </ul>
-</section>
-
-    <!-- PROJECTS -->
- <section class="section">
-  <h2>Projects</h2>
-  <div class="cert-list">
-    <!-- Expense Tracker Card -->
-    <div class="cert-card">
-      <img src="EXPENSES.png" alt="Expense Tracker Screenshot">
-      <div class="cert-title">Expense Tracker</div>
-      <div style="font-size:0.99em;color:#38555b;margin-bottom:7px;">
-        Command-line Python app for tracking daily expenses and viewing totals by category. Export to CSV.
-      </div>
-      <a href="https://github.com/amyliamartineau/expense-tracker" class="cert-link" target="_blank">View on GitHub</a>
+  <nav>
+    <div class="container">
+      <span class="logo">Amylia Martineau</span>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#certifications">Certifications</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
     </div>
-    <!-- Add more project cards below this as you build new ones! -->
-    <!-- Example for Password Generator project -->
-    <!--
-    <div class="cert-card">
-      <img src="password_generator_screenshot.png" alt="Password Generator Screenshot">
-      <div class="cert-title">Password Generator Web App</div>
-      <div style="font-size:0.99em;color:#38555b;margin-bottom:7px;">
-        A web tool to generate secure passwords. Built with HTML, CSS, and JavaScript. (Coming soon!)
-      </div>
-      <a href="https://github.com/amyliamartineau/password-generator" class="cert-link" target="_blank">View on GitHub</a>
+  </nav>
+  <header class="hero">
+    <div class="container">
+      <img src="images/Photoroom_20250605_140000.JPEG" class="profile-img" alt="Amylia Martineau" />
+      <h1>Hey, I’m Amylia Martineau</h1>
+      <p class="tagline">Python & Tech Enthusiast | Medical Admin Pro | Automation Addict</p>
     </div>
-    -->
-  </div>
-</section>
-
-    <!-- CONTACT (repeat buttons or add socials as you create them) -->
-    <section class="section">
-      <h2>Contact & Links</h2>
-      <div class="hero-buttons">
-        <a href="mailto:amyliamartineau@hotmail.com" class="hero-btn">📧 Email Me</a>
-        <!-- Add GitHub and LinkedIn buttons here when ready! -->
+  </header>
+  <section id="about" class="container">
+    <h2>About Me</h2>
+    <p>
+      Self-taught tech enthusiast and Medical Office Administration student, passionate about Python, automation, and optimizing everyday tasks. I build practical solutions and love making things work smarter. Based in Sudbury, ON.
+    </p>
+  </section>
+  <section id="projects" class="container">
+    <h2>Projects</h2>
+    <div class="card-grid">
+      <div class="card">
+        <img src="images/EXPENSES.png" alt="Expense Tracker Screenshot" />
+        <div class="card-body">
+          <h3>Expense Tracker</h3>
+          <p>Python app for tracking expenses and visualizing spending.</p>
+          <a href="https://github.com/amyliamartineau/expense-tracker" target="_blank">GitHub Repo</a>
+        </div>
       </div>
-    </section>
-
-    <!-- FOOTER -->
-    <div class="footer">
-      &copy; 2025 Amylia Martineau &middot; Portfolio built with love, caffeine, and cloud tech ☁️
+      <!-- Cloud Resume Project (add a screenshot if you want, otherwise just show as link) -->
+      <div class="card">
+        <!-- Replace src with actual screenshot if you have one, otherwise use a placeholder image -->
+        <img src="images/cloud-resume-placeholder.png" alt="Cloud Resume Screenshot" />
+        <div class="card-body">
+          <h3>Cloud Resume Challenge</h3>
+          <p>End-to-end cloud portfolio with Python backend, AWS, serverless, CI/CD.</p>
+          <a href="https://github.com/amyliamartineau/cloud-resume-challenge" target="_blank">GitHub Repo</a>
+        </div>
+      </div>
     </div>
-  </div>
+  </section>
+  <section id="certifications" class="container">
+    <h2>Certifications</h2>
+    <div class="card-grid">
+      <div class="card">
+        <img src="images/JAVASCRIPTCERT.png" alt="JavaScript Certificate" />
+        <div class="card-body">
+          <h3>Legacy JavaScript Algorithms & Data Structures</h3>
+          <a href="https://www.freecodecamp.org/certification/amyliamartineau/javascript-algorithms-and-data-structures" target="_blank">Show Certificate</a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="images/WEBDESIGNCERT.png" alt="Responsive Web Design Certificate" />
+        <div class="card-body">
+          <h3>Responsive Web Design</h3>
+          <a href="https://www.freecodecamp.org/certification/amyliamartineau/responsive-web-design" target="_blank">Show Certificate</a>
+        </div>
+      </div>
+      <!-- Cisco Certs (Optional) -->
+      <div class="card">
+        <img src="images/introduction-to-cybersecurity.png" alt="Cisco Cybersecurity Certificate" />
+        <div class="card-body">
+          <h3>Cisco Introduction to Cybersecurity</h3>
+          <!-- If you have a public cert link, add it here -->
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="contact" class="container">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:amyliamartineau@hotmail.com">amyliamartineau@hotmail.com</a></p>
+    <p>
+      <a href="https://github.com/amyliamartineau" target="_blank">GitHub</a>
+    </p>
+  </section>
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Amylia Martineau</p>
+    </div>
+  </footer>
 </body>
 </html>
