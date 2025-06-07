@@ -1,204 +1,267 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Amylia | Aspiring Cloud & Cybersecurity Specialist</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Amylia Martineau | Aspiring Tech Professional</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;900&family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --accent: #41b3a3;
+      --accent2: #cbeaed;
+      --dark: #23272f;
+      --light: #fafbfc;
+      --muted: #e4e6ea;
+      --shadow: 0 6px 30px #41b3a326;
+    }
     body {
+      background: linear-gradient(120deg, var(--light) 70%, var(--accent2) 100%);
+      font-family: 'Inter', 'Montserrat', Arial, sans-serif;
+      color: var(--dark);
       margin: 0;
       padding: 0;
-      font-family: 'Segoe UI', Calibri, Arial, sans-serif;
-      background: linear-gradient(135deg, #f7f2fd 0%, #fde9f2 100%);
-      color: #232333;
-      min-height: 100vh;
     }
-    .nav {
-      width: 100%;
-      padding: 24px 0 0 0;
-      display: flex;
-      justify-content: flex-end;
-      gap: 38px;
-      font-size: 1.04em;
-      letter-spacing: 0.02em;
-      font-weight: 500;
-      max-width: 950px;
+    .container {
+      max-width: 900px;
       margin: 0 auto;
+      padding: 40px 16px 24px 16px;
     }
-    .nav a {
-      text-decoration: none;
-      color: #6c39bd;
-      padding: 4px 0;
-      transition: color 0.17s;
-    }
-    .nav a:hover {
-      color: #c24ba3;
-    }
-    .main {
-      max-width: 950px;
-      margin: 40px auto 0 auto;
+    .hero {
       display: flex;
-      gap: 38px;
+      gap: 40px;
       align-items: center;
+      justify-content: space-between;
       flex-wrap: wrap;
-      padding: 0 18px;
+      background: #fff;
+      border-radius: 22px;
+      box-shadow: var(--shadow);
+      padding: 38px 32px 32px 32px;
+      margin-bottom: 32px;
     }
-    .left {
-      flex: 1 1 380px;
-      min-width: 260px;
+    .hero-text {
+      flex: 1 1 330px;
     }
-    .name {
-      font-size: 2.9em;
-      font-weight: 800;
-      letter-spacing: 0.03em;
-      margin-bottom: 10px;
-      color: #6c39bd;
+    .hero-name {
+      font-size: 2.6em;
+      font-weight: 900;
+      color: var(--accent);
+      margin-bottom: 8px;
+      font-family: 'Montserrat', 'Inter', Arial, sans-serif;
+      letter-spacing: 0.02em;
     }
-    .tagline {
-      font-size: 1.2em;
-      color: #232333;
-      font-weight: 500;
-      margin-bottom: 15px;
+    .hero-tag {
+      font-size: 1.21em;
+      font-weight: 600;
+      color: var(--dark);
+      margin-bottom: 14px;
     }
-    .desc {
+    .hero-desc {
       font-size: 1.07em;
-      color: #36366b;
+      color: #38555b;
       margin-bottom: 26px;
-      line-height: 1.6;
+      line-height: 1.55;
+      max-width: 500px;
     }
-    .pic-container {
-      flex: 0 0 230px;
+    .hero-buttons {
       display: flex;
-      justify-content: center;
-      align-items: center;
-      min-width: 200px;
+      gap: 16px;
+      flex-wrap: wrap;
     }
-    .pic-container img {
-      width: 200px;
-      height: 200px;
-      object-fit: cover;
+    .hero-btn {
+      display: inline-block;
+      background: linear-gradient(90deg, var(--accent), #388087 100%);
+      color: #fff;
+      font-weight: 600;
+      font-size: 1.05em;
+      padding: 12px 32px;
+      border-radius: 32px;
+      text-decoration: none;
+      box-shadow: 0 2px 12px #41b3a314;
+      transition: transform 0.15s, box-shadow 0.2s;
+      border: none;
+    }
+    .hero-btn:hover {
+      transform: translateY(-3px) scale(1.045);
+      box-shadow: 0 6px 30px #41b3a326;
+      background: linear-gradient(90deg, #388087 10%, var(--accent) 90%);
+    }
+    .hero-pic {
+      width: 190px;
+      height: 190px;
       border-radius: 50%;
-      border: 7px solid;
-      border-image: linear-gradient(135deg, #c24ba3 0%, #7c83ff 100%);
-      border-image-slice: 1;
-      box-shadow: 0 2px 32px rgba(124,131,255,0.08);
+      object-fit: cover;
+      border: 6px solid var(--accent2);
+      box-shadow: 0 2px 32px #41b3a320;
+      background: #fff;
+      margin: 0 0 0 12px;
+      animation: fadein 1.2s;
+    }
+    @keyframes fadein {
+      from { opacity: 0; transform: scale(0.95);}
+      to   { opacity: 1; transform: scale(1);}
+    }
+    .section {
+      background: #fff;
+      border-radius: 18px;
+      margin-bottom: 32px;
+      padding: 36px 30px 32px 30px;
+      box-shadow: var(--shadow);
+      animation: fadein 0.7s;
+    }
+    h2 {
+      color: #388087;
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-size: 1.37em;
+      margin-top: 0;
+      letter-spacing: 0.01em;
+      margin-bottom: 18px;
+      font-weight: 700;
+    }
+    .cert-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+    }
+    .cert-card {
+      flex: 1 1 260px;
+      min-width: 210px;
+      background: var(--light);
+      border-radius: 13px;
+      box-shadow: 0 2px 16px #3880870b;
+      padding: 20px 18px 14px 18px;
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      transition: box-shadow 0.2s;
+      border: 1.5px solid #e8f4f6;
+    }
+    .cert-card:hover {
+      box-shadow: 0 8px 24px #41b3a328;
+    }
+    .cert-card img {
+      max-width: 210px;
+      max-height: 90px;
+      border-radius: 7px;
+      margin-bottom: 13px;
       background: #fff;
     }
-    .links {
-      margin-top: 34px;
-      font-size: 1.1em;
+    .cert-title {
+      font-weight: 600;
+      font-size: 1.08em;
+      color: #38555b;
+      margin-bottom: 8px;
     }
-    .links a {
-      color: #6c39bd;
+    .cert-link {
+      color: #41b3a3;
       text-decoration: none;
-      margin-right: 19px;
+      font-size: 0.98em;
+      margin-bottom: 5px;
+      transition: color 0.2s;
       font-weight: 500;
-      transition: color 0.17s;
     }
-    .links a:hover {
-      color: #c24ba3;
+    .cert-link:hover {
+      color: #388087;
+      text-decoration: underline;
     }
-    @media (max-width: 750px) {
-      .main { flex-direction: column-reverse; gap: 18px; align-items: stretch; }
-      .pic-container { margin-bottom: 10px; }
-      .name { font-size: 2em; }
-      .tagline { font-size: 1.07em; }
+    .resume-btns {
+      display: flex;
+      gap: 18px;
+      margin-top: 8px;
+      flex-wrap: wrap;
     }
-    @media (max-width: 500px) {
-      .nav { justify-content: center; font-size: 1em; gap: 14px; }
-      .main { padding: 0 2px; }
+    .footer {
+      text-align: center;
+      color: #7c8b91;
+      font-size: 1em;
+      padding: 30px 12px 20px 12px;
+      background: #f8fafc;
+      border-top: 1.5px solid #e4e6ea;
+      margin-top: 30px;
+      letter-spacing: 0.01em;
+    }
+    @media (max-width: 900px) {
+      .hero { flex-direction: column-reverse; align-items: flex-start; gap: 25px;}
+      .hero-pic { margin-left: 0;}
+      .container { padding: 30px 2vw 12px 2vw; }
+      .section { padding: 18px 5vw 18px 5vw;}
+    }
+    @media (max-width: 550px) {
+      .hero-name { font-size: 1.7em;}
+      .section { padding: 11vw 2vw 10vw 2vw;}
+      .cert-card { padding: 13px 5px 13px 9px;}
+      .cert-card img { max-width: 130px;}
+      h2 { font-size: 1.05em;}
     }
   </style>
 </head>
 <body>
-  <nav class="nav">
-    <a href="#about">About</a>
-    <a href="#projects">Projects</a>
-    <a href="#resume">Resume</a>
-    <a href="#contact">Contact</a>
-  </nav>
-
-  <section class="main">
-    <div class="left">
-      <div class="name">Amylia</div>
-      <div class="tagline">Aspiring Cloud & Cybersecurity Specialist,<br>fueled by curiosity and caffeine.</div>
-      <div class="desc">
-        I’m a bilingual admin on a mission to become a techie.<br>
-        Currently learning Python, cloud, and cybersecurity.<br>
-        Open to remote opportunities and always looking for my next challenge.<br>
-        <span style="font-size:0.98em;color:#a680c2">Based in Sudbury, ON.</span>
+  <div class="container">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-text">
+        <div class="hero-name">Amylia Martineau</div>
+        <div class="hero-tag">Aspiring tech professional exploring cloud, cybersecurity, and modern web.</div>
+        <div class="hero-desc">
+          I’m transitioning into tech after a career in admin & office management. I’m building skills in Python, cloud computing, cybersecurity, and web development—always learning, always growing.<br>
+          <span style="font-size:0.97em;color:#38808799;">Based in Sudbury, ON. Open to remote opportunities and tech challenges.</span>
+        </div>
+        <div class="hero-buttons">
+          <a href="mailto:amyliamartineau@hotmail.com" class="hero-btn">📧 Email Me</a>
+          <a href="Resume.pdf" class="hero-btn" download target="_blank">⬇️ Resume (PDF)</a>
+          <a href="Resume.docx" class="hero-btn" download target="_blank">⬇️ Resume (Word)</a>
+          <!-- Add more buttons (GitHub, LinkedIn) as you set up profiles -->
+        </div>
       </div>
-      <div class="links">
-        <a href="mailto:amyliamartineau@hotmail.com">Email</a>
-        <a href="#" target="_blank">GitHub</a>
-        <a href="#" target="_blank">LinkedIn</a>
+      <img src="Photoroom_20250605_140000.JPEG" alt="Amylia's Profile Photo" class="hero-pic">
+    </section>
+    
+    <!-- CERTIFICATIONS -->
+    <section class="section">
+      <h2>Certifications</h2>
+      <div class="cert-list">
+        <div class="cert-card">
+          <img src="introduction-to-cybersecurity.png" alt="Cisco Cybersecurity Badge">
+          <div class="cert-title">Introduction to Cybersecurity</div>
+          <a href="Cybersecuritybadge.pdf" class="cert-link" target="_blank">Cisco Networking Academy, 2025 (PDF)</a>
+        </div>
+        <div class="cert-card">
+          <img src="JAVASCRIPTCERT.png" alt="JS Certificate">
+          <div class="cert-title">Legacy JavaScript Algorithms & Data Structures</div>
+          <a href="https://freecodecamp.org/certification/amyliamartineau/javascript-algorithms-and-data-structures" class="cert-link" target="_blank">FreeCodeCamp, 2025</a>
+        </div>
+        <div class="cert-card">
+          <img src="WEBDESIGNCERT.png" alt="Web Design Certificate">
+          <div class="cert-title">Responsive Web Design</div>
+          <a href="https://freecodecamp.org/certification/fcc-e6993284-6be0-4354-a531-368df38f3389/responsive-web-design" class="cert-link" target="_blank">FreeCodeCamp, 2025</a>
+        </div>
       </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section">
+      <h2>Projects</h2>
+      <ul>
+        <li>Cloud Resume Challenge (In Progress)</li>
+        <li>Password Generator Web App (Coming Soon)</li>
+        <li>Personal Expense Tracker in Python (Planned)</li>
+        <!-- Add real links as you publish projects! -->
+      </ul>
+    </section>
+
+    <!-- CONTACT (duplicate hero-buttons here if you want, or leave for footer) -->
+    <section class="section">
+      <h2>Contact & Links</h2>
+      <div class="hero-buttons">
+        <a href="mailto:amyliamartineau@hotmail.com" class="hero-btn">📧 Email Me</a>
+        <!-- Add GitHub and LinkedIn buttons here as you set them up -->
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <div class="footer">
+      &copy; 2025 Amylia Martineau &middot; Portfolio built with love, caffeine, and cloud tech ☁️
     </div>
-    <div class="pic-container">
-      <img src="Photoroom_20250605_140000.JPEG" alt="Amylia's Profile Photo">
-    </div>
-  </section>
-
-  <section id="about" style="max-width: 680px; margin: 44px auto 0 auto; padding: 0 18px;">
-    <h2 style="color:#6c39bd;letter-spacing:0.01em;">About</h2>
-    <p>
-      Hi! I’m Amylia—a bilingual admin (French/English) leveling up in Python, cloud, and cybersecurity. I love learning, building, and making tech work for people. Not an expert (yet!), but I’m all in and excited to grow.
-    </p>
-  </section>
-
-  <section id="projects" style="max-width: 680px; margin: 44px auto 0 auto; padding: 0 18px;">
-  <h2 style="color:#6c39bd;letter-spacing:0.01em;">Projects</h2>
-  <ul style="line-height:2;">
-    <li>Survey Form (FCC) – <span style="color:#888;">[link or screenshot]</span></li>
-    <li>Tribute Page (FCC) – <span style="color:#888;">[link or screenshot]</span></li>
-    <li>Basic Python Calculator (in progress)</li>
-    <li>AWS Cloud Resume Challenge (planned)</li>
-  </ul>
-</section>
-
-<section id="certifications" style="max-width: 680px; margin: 44px auto 0 auto; padding: 0 18px;">
-  <h2 style="color:#6c39bd;letter-spacing:0.01em;">Certifications</h2>
-  <ul style="line-height:2;">
-    <li>
-      <a href="https://freecodecamp.org/certification/amyliamartineau/javascript-algorithms-and-data-structures" target="_blank">
-        Legacy JavaScript Algorithms and Data Structures (FreeCodeCamp, 2025)
-      </a><br>
-      <img src="JAVASCRIPTCERT.png" alt="JS Certificate" style="max-width:310px;margin-top:7px;border-radius:10px;box-shadow:0 2px 16px #6c39bd15;">
-    </li>
-    <li>
-      <a href="https://freecodecamp.org/certification/fcc-e6993284-6be0-4354-a531-368df38f3389/responsive-web-design" target="_blank">
-        Responsive Web Design (FreeCodeCamp, 2025)
-      </a><br>
-      <img src="WEBDESIGNCERT.png" alt="Web Design Certificate" style="max-width:310px;margin-top:7px;border-radius:10px;box-shadow:0 2px 16px #c24ba315;">
-    </li>
-    <li>
-      <a href="Cybersecuritybadge.pdf" target="_blank">
-        Introduction to Cybersecurity (Cisco Networking Academy, 2025)
-      </a><br>
-      <img src="introduction-to-cybersecurity.png" alt="Cisco Cybersecurity Badge" style="max-width:170px;margin-top:7px;border-radius:10px;box-shadow:0 2px 16px #74c04233;">
-    </li>
-  </ul>
-</section>
-
-<section id="resume" style="max-width: 680px; margin: 44px auto 0 auto; padding: 0 18px;">
-  <h2 style="color:#6c39bd;letter-spacing:0.01em;">Resume</h2>
-  <ul>
-    <li>
-      <a href="Resume.pdf" download target="_blank">Download PDF Resume</a>
-    </li>
-    <li>
-      <a href="Resume.docx" download target="_blank">Download DOCX Resume</a>
-    </li>
-  </ul>
-</section>
-
-<section id="contact" style="max-width: 680px; margin: 44px auto 0 auto; padding: 0 18px 40px 18px;">
-  <h2 style="color:#6c39bd;letter-spacing:0.01em;">Contact</h2>
-  <a href="mailto:amyliamartineau@hotmail.com" 
-     style="display:inline-block; padding:12px 32px; background:linear-gradient(90deg,#c24ba3,#7c83ff); color:#fff; font-weight:600; border-radius:30px; text-decoration:none; font-size:1.1em; box-shadow:0 2px 12px #7c83ff22; transition:background 0.2s;">
-    📧 Email Me
-  </a>
-</section>
-
+  </div>
 </body>
 </html>
