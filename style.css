@@ -122,6 +122,7 @@ footer {
   .hero {
     padding: 1.5rem 0;
   }
+<<<<<<< HEAD
 }/* Animation Enhancements */
 .container {
   opacity: 0;
@@ -164,3 +165,6 @@ body.light-mode footer {
   color: #555;
 }
 
+=======
+}
+>>>>>>> 7e39800f2fbcdc34b4c59d5f476af56e9ed253e8
